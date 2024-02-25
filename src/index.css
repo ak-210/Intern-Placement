@@ -6,10 +6,15 @@
 
 :root{
     font-size: 15px;
-    --primary-color: #b3aaff;
+    --primary-color: #42c8f0;
+    --sec-color: #074b60;
     --bg-color: #13072e;
+    --colour: #929292;
+    --hover: #c6c5c5;
+    --active: white;
     font-family: 'Noto Sans', sans-serif;
     color: white;
+    background-color: var(--bg-color);
 }
 
 button {
@@ -18,11 +23,27 @@ button {
 }
 a {
     text-decoration: none;
+    color: inherit;
 }
 ul {
     list-style: none;
     text-decoration: none;
 }
+
+/* Background */
+body{
+    background: url('../public/img/bg.png') no-repeat fixed;
+
+    background-size: cover;
+    background-position: bottom;
+}
+body.bg-home {
+    background-image: url('../public/img/bg.png');
+}
+body.bg-exam {
+    background-image: url('../public/img/bg2.png');
+}
+
 /* To hide the scrollbar */
 ::-webkit-scrollbar {
     display: none;
@@ -34,16 +55,21 @@ ul {
     flex-wrap: wrap;
 }
 .flex-col {
+    display: flex;
     flex-direction: column;
 }
 .flex-jc-sb {
     justify-content: space-between;
+}
+.flex-jc-sa {
+    justify-content: space-around;
 }
 .flex-jc-c{
     justify-content: center;
 }
 .flex-ai-c {
     align-items: center;
+    align-content: center;
 }
 
 .center {
@@ -76,15 +102,31 @@ ul {
     height: 2rem;
     background: transparent;
 }
+
+#to-top {
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    padding: 1rem;
+    border-radius: 50%;
+    color: rgb(86, 86, 86);
+    background-color: rgba(0, 0, 0, 0.197);
+}
+
+#to-top:hover {
+    background-color: #000000a4;
+}
+
+#to-top svg {
+    width: 3rem;
+    aspect-ratio: 1;
+}
 /* Utility classes end *******************************************/
 
 /* Navigation *******************************************************/
 .navBar {
-    background-color: var(--bg-color);
+    /* background-color: var(--bg-color); */
     padding: 1rem 3.5rem;
-    --colour: #929292;
-    --hover: #c6c5c5;
-    --active: white;
     border-bottom: .5px solid #3b3b3b;
 }
 
@@ -107,7 +149,7 @@ ul {
 .nav-link:hover {
     color: var(--hover);
 }
-.nav-link.active {
+.active .nav-link {
     font-size: 1.15em;
     color: var(--active);
     font-weight: 600;
@@ -125,7 +167,7 @@ ul {
 
 /* Sub Navigation **************************************************/
 .sub-nav-container {
-    background-color: var(--bg-color);
+    /* background-color: var(--bg-color); */
     gap: 3rem;
     padding: 1rem 0;
 }
@@ -137,6 +179,9 @@ ul {
     padding: .15rem 1rem;
     border-radius: 1rem;
 }
+.sub-nav-link:hover {
+    color: var(--hover);
+}
 .sub-nav-link.active {
     font-weight: 500;
     color: black;
@@ -146,8 +191,7 @@ ul {
 
 /* Hero section ***************************************************/
 .hero-container {
-    background: var(--bg-color);
-    height: 900px;
+    /* background: var(--bg-color); */
     padding: 4rem 8rem;
     gap: 2rem;
 }
@@ -178,9 +222,9 @@ ul {
 }
 
 .card {
-    gap: 1rem;
-    width: 15rem;
-    background: linear-gradient(135deg, #13072e 0%, #3f2182 100%);
+    gap: 1.5rem;
+    width: 18rem;
+    background: linear-gradient(135deg, #07182e 0%, #0159a1 100%);
     padding: 1.5rem;
     padding-bottom: 1rem;
     border-radius: 1rem;
@@ -189,6 +233,8 @@ ul {
 .card-img {
     width: 100%;
     border: 1px solid white;
+    border-radius: 1rem;
+    overflow: hidden;
 }
 
 .card-link {
@@ -210,4 +256,6 @@ ul {
 }
 /* Cards end */
 /* Hero section end ***********************************************/
+
+
 

@@ -11,7 +11,7 @@ export default function Hero() {
 
         <div className='card-container flex flex-jc-c'>
           <Card title='Exam' img_src='./img/card_exam.jpg' link='/Exam/0'/>
-          <Card title='Interview' img_src='./img/card_exam.jpg' />
+          <Card title='Interview' img_src='./img/card_exam.jpg' link='/Interview/0' />
           <Card title='Preparation' img_src='./img/card_exam.jpg' />
         </div>
 
